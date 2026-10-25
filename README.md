@@ -119,14 +119,3 @@ python tools/verify_rebuild.py framework/recipes/submissions/t2_v4b.zip weights/
 
 Code: Apache License 2.0. The PE-Core files are adapted from Meta's Perception Models (Apache 2.0, see
 `framework/pe_text/NOTICE.PE.md`); the pretrained PE-Core and SigLIP 2 weights keep their original licenses.
-
-## Citation
-
-```bibtex
-@misc{ninh2026uparreport,
-  title  = {Convention-Aware Fine-Tuning and Closed-Set Re-Ranking for Pedestrian Attribute Recognition and Retrieval: UPAR 2027 System Report},
-  author = {Ninh Tran Khanh},
-  note   = {RWS Workshop at WACV 2027, OpenReview submission 65},
-  year   = {2026}
-}
-```
