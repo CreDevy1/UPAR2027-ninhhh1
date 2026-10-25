@@ -1,0 +1,438 @@
+{
+  "templates": [
+    "a photo of {}.",
+    "a cctv photo of {}.",
+    "a low resolution photo of {}.",
+    "a full body photo of {}."
+  ],
+  "generic": [
+    "a person",
+    "a pedestrian",
+    "a person walking"
+  ],
+  "attributes": [
+    {
+      "name": "Age-Young",
+      "pos": [
+        "a child",
+        "a kid",
+        "a teenager"
+      ],
+      "neg": null,
+      "group": "age"
+    },
+    {
+      "name": "Age-Adult",
+      "pos": [
+        "an adult",
+        "a young adult",
+        "a middle-aged person"
+      ],
+      "neg": null,
+      "group": "age"
+    },
+    {
+      "name": "Age-Old",
+      "pos": [
+        "an elderly person",
+        "an old person",
+        "a senior citizen"
+      ],
+      "neg": null,
+      "group": "age"
+    },
+    {
+      "name": "Gender-Female",
+      "pos": [
+        "a woman",
+        "a girl",
+        "a female pedestrian"
+      ],
+      "neg": [
+        "a man",
+        "a boy",
+        "a male pedestrian"
+      ],
+      "group": null
+    },
+    {
+      "name": "Hair-Length-Short",
+      "pos": [
+        "a person with short hair"
+      ],
+      "neg": null,
+      "group": "hair"
+    },
+    {
+      "name": "Hair-Length-Long",
+      "pos": [
+        "a person with long hair"
+      ],
+      "neg": null,
+      "group": "hair"
+    },
+    {
+      "name": "Hair-Length-Bald",
+      "pos": [
+        "a bald person",
+        "a person with a shaved head"
+      ],
+      "neg": null,
+      "group": "hair"
+    },
+    {
+      "name": "UpperBody-Length-Short",
+      "pos": [
+        "a person wearing a short-sleeved shirt",
+        "a person wearing a t-shirt",
+        "a person wearing a sleeveless top"
+      ],
+      "neg": [
+        "a person wearing a long-sleeved shirt",
+        "a person wearing a jacket",
+        "a person wearing a coat"
+      ],
+      "group": null
+    },
+    {
+      "name": "UpperBody-Color-Black",
+      "pos": [
+        "a person wearing a black shirt",
+        "a person wearing a black top",
+        "a person wearing a black jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Blue",
+      "pos": [
+        "a person wearing a blue shirt",
+        "a person wearing a blue top",
+        "a person wearing a blue jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Brown",
+      "pos": [
+        "a person wearing a brown shirt",
+        "a person wearing a brown top",
+        "a person wearing a brown jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Green",
+      "pos": [
+        "a person wearing a green shirt",
+        "a person wearing a green top",
+        "a person wearing a green jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Grey",
+      "pos": [
+        "a person wearing a grey shirt",
+        "a person wearing a grey top",
+        "a person wearing a grey jacket",
+        "a person wearing a gray shirt",
+        "a person wearing a gray top",
+        "a person wearing a gray jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Orange",
+      "pos": [
+        "a person wearing a orange shirt",
+        "a person wearing a orange top",
+        "a person wearing a orange jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Pink",
+      "pos": [
+        "a person wearing a pink shirt",
+        "a person wearing a pink top",
+        "a person wearing a pink jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Purple",
+      "pos": [
+        "a person wearing a purple shirt",
+        "a person wearing a purple top",
+        "a person wearing a purple jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Red",
+      "pos": [
+        "a person wearing a red shirt",
+        "a person wearing a red top",
+        "a person wearing a red jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-White",
+      "pos": [
+        "a person wearing a white shirt",
+        "a person wearing a white top",
+        "a person wearing a white jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Yellow",
+      "pos": [
+        "a person wearing a yellow shirt",
+        "a person wearing a yellow top",
+        "a person wearing a yellow jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "UpperBody-Color-Other",
+      "pos": [
+        "a person wearing a beige shirt",
+        "a person wearing a beige top",
+        "a person wearing a beige jacket",
+        "a person wearing a khaki shirt",
+        "a person wearing a khaki top",
+        "a person wearing a khaki jacket",
+        "a person wearing a multicolored shirt",
+        "a person wearing a multicolored top",
+        "a person wearing a multicolored jacket",
+        "a person wearing a striped shirt",
+        "a person wearing a striped top",
+        "a person wearing a striped jacket"
+      ],
+      "neg": null,
+      "group": "upper_color"
+    },
+    {
+      "name": "LowerBody-Length-Short",
+      "pos": [
+        "a person wearing shorts",
+        "a person wearing a short skirt"
+      ],
+      "neg": [
+        "a person wearing long pants",
+        "a person wearing a long skirt"
+      ],
+      "group": null
+    },
+    {
+      "name": "LowerBody-Color-Black",
+      "pos": [
+        "a person wearing black pants",
+        "a person wearing black trousers",
+        "a person wearing a black skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Blue",
+      "pos": [
+        "a person wearing blue pants",
+        "a person wearing blue trousers",
+        "a person wearing a blue skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Brown",
+      "pos": [
+        "a person wearing brown pants",
+        "a person wearing brown trousers",
+        "a person wearing a brown skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Green",
+      "pos": [
+        "a person wearing green pants",
+        "a person wearing green trousers",
+        "a person wearing a green skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Grey",
+      "pos": [
+        "a person wearing grey pants",
+        "a person wearing grey trousers",
+        "a person wearing a grey skirt",
+        "a person wearing gray pants",
+        "a person wearing gray trousers",
+        "a person wearing a gray skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Orange",
+      "pos": [
+        "a person wearing orange pants",
+        "a person wearing orange trousers",
+        "a person wearing a orange skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Pink",
+      "pos": [
+        "a person wearing pink pants",
+        "a person wearing pink trousers",
+        "a person wearing a pink skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Purple",
+      "pos": [
+        "a person wearing purple pants",
+        "a person wearing purple trousers",
+        "a person wearing a purple skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Red",
+      "pos": [
+        "a person wearing red pants",
+        "a person wearing red trousers",
+        "a person wearing a red skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-White",
+      "pos": [
+        "a person wearing white pants",
+        "a person wearing white trousers",
+        "a person wearing a white skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Yellow",
+      "pos": [
+        "a person wearing yellow pants",
+        "a person wearing yellow trousers",
+        "a person wearing a yellow skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Color-Other",
+      "pos": [
+        "a person wearing beige pants",
+        "a person wearing beige trousers",
+        "a person wearing a beige skirt",
+        "a person wearing khaki pants",
+        "a person wearing khaki trousers",
+        "a person wearing a khaki skirt",
+        "a person wearing multicolored pants",
+        "a person wearing multicolored trousers",
+        "a person wearing a multicolored skirt",
+        "a person wearing striped pants",
+        "a person wearing striped trousers",
+        "a person wearing a striped skirt"
+      ],
+      "neg": null,
+      "group": "lower_color"
+    },
+    {
+      "name": "LowerBody-Type-Trousers&Shorts",
+      "pos": [
+        "a person wearing trousers",
+        "a person wearing jeans",
+        "a person wearing shorts"
+      ],
+      "neg": null,
+      "group": "lower_type"
+    },
+    {
+      "name": "LowerBody-Type-Skirt&Dress",
+      "pos": [
+        "a person wearing a skirt",
+        "a person wearing a dress"
+      ],
+      "neg": null,
+      "group": "lower_type"
+    },
+    {
+      "name": "Accessory-Backpack",
+      "pos": [
+        "a person carrying a backpack",
+        "a person wearing a backpack"
+      ],
+      "neg": null,
+      "group": null
+    },
+    {
+      "name": "Accessory-Bag",
+      "pos": [
+        "a person carrying a handbag",
+        "a person carrying a shoulder bag",
+        "a person carrying a bag"
+      ],
+      "neg": null,
+      "group": null
+    },
+    {
+      "name": "Accessory-Glasses-Normal",
+      "pos": [
+        "a person wearing glasses",
+        "a person wearing eyeglasses"
+      ],
+      "neg": null,
+      "group": null
+    },
+    {
+      "name": "Accessory-Glasses-Sun",
+      "pos": [
+        "a person wearing sunglasses"
+      ],
+      "neg": null,
+      "group": null
+    },
+    {
+      "name": "Accessory-Hat",
+      "pos": [
+        "a person wearing a hat",
+        "a person wearing a cap"
+      ],
+      "neg": null,
+      "group": null
+    }
+  ]
+}

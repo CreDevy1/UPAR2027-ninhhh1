@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "backbones": {
+    "pel": {
+      "status": "PASS",
+      "microbatch": 16,
+      "accumulation": 4
+    },
+    "sl2l": {
+      "status": "PASS",
+      "microbatch": 16,
+      "accumulation": 4
+    }
+  }
+}

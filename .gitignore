@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+weights/
+data/
+framework/core/runs/
+framework/recipes/runs_tv/
+framework/recipes/runs_hr_tv/
+framework/recipes/build/
+framework/recipes/submissions/
+framework/recipes/data/
+*.pt
+*.zip
+*.part

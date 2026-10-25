@@ -1,0 +1,21 @@
+name: upar2027
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch=2.4.1
+  - torchvision=0.19.1
+  - pytorch-cuda=12.1
+  - numpy=1.26
+  - pillow
+  - pip
+  - pip:
+      - transformers==4.49.0
+      - huggingface_hub
+      - safetensors>=0.4
+      - sentencepiece==0.2.1
+      - protobuf>=4.25,<7
+      - regex
+      - ftfy==6.3.1

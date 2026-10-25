@@ -1,0 +1,1 @@
+{"T": 1.5, "beta": 0.75, "tau_q": 2.5, "prior_c": 0.75, "graph": "visual", "knn_k": 0, "qd_alpha": 0.8, "qd_iters": 3, "qd_k": 10, "qd_tau_k": 0.05, "qd_tau_s": 2.0, "qd_mode": "gated", "qd_s0": 0.1, "qprior_gamma": 0.5, "sk_gamma": 1.0, "sk_iters": 3}

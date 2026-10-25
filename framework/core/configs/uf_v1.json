@@ -1,0 +1,18 @@
+{
+  "version": "UF-v1", "seed": 42, "epochs": 6,
+  "grid_hw": [16, 8], "draws_per_epoch": 36000,
+  "effective_batch": 64, "n_update": 3378, "checkpoint_selection": "last", "loader_workers": 4,
+  "backbone_lr": 0.00001, "head_lr": 0.0003, "weight_decay": 0.01,
+  "warmup_ratio": 0.05, "cosine_min_ratio": 0.1, "clip_grad_norm": 1.0,
+  "amp": "fp16", "amp_initial_scale": 1024, "gradient_checkpointing": true,
+  "alpha": 0.75, "force_one": true, "bootstrap_samples": 200,
+  "domain_mask": "PETA:UpperBody-Color-Other,LowerBody-Color-Other",
+  "augmentation": "legacy surveillance source-crop + flip 0.5; bilinear squash",
+  "calibration": "TRAIN-only FP64 LBFGS, own checkpoint text directions",
+  "backbones": {
+    "peb": {"model": "facebook/PE-Core-B16-224", "patch": 16, "native": 224},
+    "sl2b": {"model": "google/siglip2-base-patch16-256", "patch": 16, "native": 256},
+    "sl2l": {"model": "google/siglip2-large-patch16-256", "patch": 16, "native": 256},
+    "pel": {"model": "facebook/PE-Core-L14-336", "patch": 14, "native": 336}
+  }
+}

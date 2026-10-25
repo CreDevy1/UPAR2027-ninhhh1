@@ -1,0 +1,20 @@
+{
+  "backbones": {
+    "peb": {
+      "microbatch": 64,
+      "accumulation": 1
+    },
+    "sl2b": {
+      "microbatch": 64,
+      "accumulation": 1
+    },
+    "sl2l": {
+      "microbatch": 64,
+      "accumulation": 1
+    },
+    "pel": {
+      "microbatch": 64,
+      "accumulation": 1
+    }
+  }
+}

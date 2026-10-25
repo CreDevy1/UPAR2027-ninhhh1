@@ -1,0 +1,6 @@
+# Training and packaging. The grader image plus the libraries used only at training time.
+FROM pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime
+RUN pip install --no-cache-dir "transformers==4.49.0" huggingface_hub "safetensors>=0.4" "sentencepiece==0.2.1" \
+        "protobuf>=4.25,<7" regex "ftfy==6.3.1"
+WORKDIR /work
+COPY . /work
