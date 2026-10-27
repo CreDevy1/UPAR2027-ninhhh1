@@ -25,7 +25,7 @@ import torch
 WORK = Path(__file__).resolve().parents[1]          # framework/recipes
 ROOT = WORK.parent                                   # framework
 REPO = ROOT.parent
-TEMPLATE = REPO / 'inference' / 'track2'             # runtime files of the scored package
+TEMPLATE = REPO / 'inference' / 'earlier' / 't2_v4b'  # runtime files of submission 1004665
 OLD = TEMPLATE
 OLD4 = TEMPLATE                                      # member specs and attribute order
 EXAMPLE = TEMPLATE                                   # metadata.yaml

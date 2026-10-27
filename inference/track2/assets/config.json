@@ -1,5 +1,5 @@
 {
-  "name": "t2_v4b",
+  "name": "t2_v5a_hr_fp32",
   "attribute_names": [
     "Age-Young",
     "Age-Adult",
@@ -52,44 +52,58 @@
         "patch": 14,
         "native": 336
       },
-      "source_checkpoint": "framework/recipes/runs_tv/allsource_pel_lc_m1_s42/epoch6.pt",
-      "source_checkpoint_sha256": "21364f3afbc533b50c6d78bd98c85b76718d9150a121568fd6935335d1ad378d",
-      "asset_sha256": "77112177f4662edd2dd7c1e0bc04e03ce46af55a39a017947ce0dfbc34382744"
+      "input_hw": [
+        336,
+        336
+      ],
+      "grid_hw": [
+        24,
+        24
+      ],
+      "source_checkpoint": "framework/recipes/runs_hr_tv/allsource_pel_hr_lc_m1_s42/epoch6.pt",
+      "source_checkpoint_sha256": "1734cca370d80e26dd2b912006e69bfa68ce5c400f8a195a5645b3fcb6899d24",
+      "asset_sha256": "1c2324f23952de4745f367f8ce4ee9d14e349bbd15157ce94ad9233632153640"
     },
     {
       "name": "sl2l",
       "weight": 1.0,
       "checkpoint": "assets/sl2l.pt",
       "spec": {
-        "model": "google/siglip2-large-patch16-256",
+        "model": "google/siglip2-large-patch16-384",
         "patch": 16,
-        "native": 256
+        "native": 384
       },
-      "source_checkpoint": "framework/recipes/runs_tv/allsource_sl2l_lc_m1_s42/epoch6.pt",
-      "source_checkpoint_sha256": "a8623705c2702f3575d43621c56bd99a6c9aee0f05538bc5639dc1f560030b7b",
+      "input_hw": [
+        384,
+        384
+      ],
+      "grid_hw": [
+        24,
+        24
+      ],
+      "source_checkpoint": "framework/recipes/runs_hr_tv/allsource_sl2l_hr_lc_m1_s42/epoch6.pt",
+      "source_checkpoint_sha256": "e12b900310476d333e78e6284398ae992e46e955fe9127f0a01c2ca9e352fc9e",
       "vision_config": {
         "hidden_size": 1024,
-        "image_size": 256,
+        "image_size": 384,
         "intermediate_size": 4096,
         "num_attention_heads": 16,
         "num_hidden_layers": 24,
         "layer_norm_eps": 1e-06,
         "model_type": "siglip_vision_model"
       },
-      "grid_hw": [
-        16,
-        8
-      ],
-      "asset_sha256": "cf15733bba870877fe1d7f544c983307a3a35a495dbdb41ebae723726c0bbe20"
+      "asset_sha256": "33963b6a5fe407df9a707ad303e4332431fe5b55e9804c35c9564ee99e0fc42b"
     }
   ],
   "feat_members": [
     "pel"
   ],
+  "feat_source_note": "pel_hr (PE-Core-L14-336 at 336x336, 576 tokens, trained on TRAIN+VAL with LC-M1)",
   "flip_tta": false,
-  "batch": 128,
+  "batch": 32,
   "decode_threads": 16,
-  "budget_s": 270.0,
+  "budget_s": 100000.0,
+  "disable_guard": true,
   "post": {
     "T": 1.5,
     "beta": 0.75,
@@ -149,5 +163,6 @@
       -4.373760106085533,
       -3.0327251889682962
     ]
-  }
+  },
+  "weight_storage": "float32 (rounded to fp16 = bit-identical to t2_v5a_hr assets)"
 }

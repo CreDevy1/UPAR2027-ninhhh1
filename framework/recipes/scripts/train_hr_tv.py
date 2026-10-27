@@ -1,7 +1,8 @@
 """Train a high-resolution encoder on TRAIN + VAL (24x24 patch grid, 576 tokens).
 
-    python -u framework/recipes/scripts/train_hr_tv.py pel           # PE-Core L/14 at 336x336 (Track 1 model)
-    python -u framework/recipes/scripts/train_hr_tv.py sl2l          # SigLIP 2 L/16 at 384x384 (not used by the scored entries)
+    python -u framework/recipes/scripts/train_hr_tv.py pel           # PE-Core L/14 at 336x336
+    python -u framework/recipes/scripts/train_hr_tv.py sl2l          # SigLIP 2 L/16 at 384x384
+  The two final packages (Track 1 and Track 2) both use these two encoders.
     python -u framework/recipes/scripts/train_hr_tv.py selftest      # optional: short GPU check, rewrites configs/hr_resources.json
     python -u framework/recipes/scripts/train_hr_tv.py calib_check   # optional: FP32 vs FP16 head-calibration check
 

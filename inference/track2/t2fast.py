@@ -101,7 +101,9 @@ def infer(paths, budget_s):
     flip = bool(CONFIG.get('flip_tta', False))
     feat_names = list(CONFIG.get('feat_members', [members[0]['name']]))
     is_feat = [m['name'] in feat_names for m in members]
-    sizes = sorted({(8 * m['spec']['patch'], 16 * m['spec']['patch']) for m in members})  # PIL (W,H)
+    def _pil_size(m):
+        return (int(m['input_hw'][1]), int(m['input_hw'][0])) if 'input_hw' in m else (8 * m['spec']['patch'], 16 * m['spec']['patch'])
+    sizes = sorted({_pil_size(m) for m in members})  # PIL (W,H)
     size_ix = {s: i for i, s in enumerate(sizes)}
     G = len(paths)
     logits = [torch.full((G, 40), float('nan'), dtype=torch.float32) for _ in members]
@@ -128,7 +130,7 @@ def infer(paths, budget_s):
             if not alive[mi]:
                 continue
             tower, head = models[mi]
-            x = xs[size_ix[(8 * m['spec']['patch'], 16 * m['spec']['patch'])]]
+            x = xs[size_ix[_pil_size(m)]]
             with torch.autocast('cuda', dtype=torch.float16, enabled=(device == 'cuda')):
                 f = tower(x).float()
                 z = head(f).float()
@@ -147,7 +149,7 @@ def infer(paths, budget_s):
         now = time.monotonic()
         rate = done / max(now - t_start, 1e-6)
         projected = (now - T0) + (G - done) / max(rate, 1e-6)
-        if done >= 4 * batch and done < G and projected > budget_s:
+        if not CONFIG.get('disable_guard', False) and done >= 4 * batch and done < G and projected > budget_s:
             drop = [i for i in range(len(members) - 1, -1, -1) if alive[i] and not is_feat[i]]
             if drop:
                 alive[drop[0]] = False
